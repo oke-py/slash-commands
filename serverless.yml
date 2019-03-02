@@ -23,8 +23,8 @@ provider:
   runtime: go1.x
 
 # you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  stage: dev
+  region: ap-northeast-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -48,22 +48,19 @@ provider:
 
 package:
  exclude:
-   - ./**
+   - .git/**
+   - .gitignore
+   - LICENSE
+   - README.md
  include:
    - ./bin/**
 
 functions:
-  hello:
-    handler: bin/hello
+  latest:
+    handler: bin/latest
     events:
       - http:
-          path: hello
-          method: get
-  world:
-    handler: bin/world
-    events:
-      - http:
-          path: world
+          path: latest
           method: get
 
 #    The following are a few example events you can configure
