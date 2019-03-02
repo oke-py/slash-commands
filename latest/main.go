@@ -31,7 +31,8 @@ func Handler(ctx context.Context) (Response, error) {
 	})
 
 	body, err := json.Marshal(map[string]interface{}{
-		"message": fmt.Sprintf("latest firefox is %v", version),
+		"response_type": "in_channel",
+		"text":          fmt.Sprintf("latest firefox is %v", version),
 	})
 	if err != nil {
 		return Response{StatusCode: 404}, err
