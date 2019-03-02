@@ -48,10 +48,7 @@ provider:
 
 package:
  exclude:
-   - .git/**
-   - .gitignore
-   - LICENSE
-   - README.md
+   - ./**
  include:
    - ./bin/**
 
