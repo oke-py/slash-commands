@@ -47,10 +47,10 @@ provider:
 #    variable1: value1
 
 package:
- exclude:
-   - ./**
- include:
-   - ./bin/**
+  exclude:
+    - ./**
+  include:
+    - ./bin/**
 
 functions:
   latest:
